@@ -4,8 +4,10 @@
 }
 
 h1 {
-  padding: 10px;
-  border: solid black;
+  margin:0%;
+  padding: 20px;
+  border-top: solid black;
+  border-bottom: solid black;
   color: solid black
 }
 
@@ -29,4 +31,30 @@ h1 {
 
 #review-list-ol{
   font-size: 60%;
+}
+
+.Navbar {
+  padding:1%;
+  margin:0%;
+  border-bottom: solid black;
+  border-top: 0%;
+}
+
+.ul-nav {
+  margin:0px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.li-nav{
+  background-color: rgb(214, 211, 211);
+  text-decoration: none;
+  list-style: none;
+}
+
+.li-nav:hover{
+  background-color: #777;
+  text-decoration: none;
+  list-style: none;
 }

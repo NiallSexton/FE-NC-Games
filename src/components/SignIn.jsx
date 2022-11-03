@@ -2,7 +2,6 @@ import{ useState, useEffect } from 'react';
 import axios from 'axios';
 
 const SignIn = ({ user, setUser }) => {
-    // console.log(user, setUser);
 
     const [loading, setLoading] = useState(true);
     const [userAPI, setUserAPI] = useState();
@@ -12,7 +11,6 @@ const SignIn = ({ user, setUser }) => {
         .get('https://nialls-games-reviews.herokuapp.com/api/users')
         .then((response) => {
             setUserAPI(response.data.users);
-            // console.log(response.data.users);
             setLoading(false);
         })
     }, []);
@@ -26,10 +24,9 @@ const SignIn = ({ user, setUser }) => {
     } else {
         return (
             <div>
-                <h3>Choose profile to log in with</h3>
+                <h3>Choose a profile to log in with</h3>
                 <select value={user} onChange={handleChange}>
                     {userAPI.map((user) => {
-                        // console.log(user);
                         return (
                             <option key={user.username} value={user.username}> {user.username}
                             </option>
