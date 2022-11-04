@@ -1,5 +1,7 @@
 const Header = () => {
-    return <h1>Niall's Games Reviews</h1>
+    return <div className="Header">
+    <h1>Niall's Games Reviews</h1>
+    </div>
 }
 
 export default Header;

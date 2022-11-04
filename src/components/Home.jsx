@@ -1,7 +1,9 @@
-import Reviews from './Reviews';
+import Reviews from './SingleReview';
 import axios from 'axios';
 import Categories from './Categories'
 import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = ({ user }) => {
     console.log(user)
@@ -9,6 +11,12 @@ const Home = ({ user }) => {
     const [reviews, setReviews] = useState([])
     const [loading, setLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [viewButton, setViewButton] = useState(false);
+    
+    const handleChange = (event) => {
+        console.log(event.currentTarget);
+        setViewButton(true);
+    }
     
     useEffect(() => {
         axios
@@ -37,17 +45,20 @@ const Home = ({ user }) => {
        <h2>Welcome To Your Home Page</h2>
        <Categories reviews={reviews} setReviews={setReviews} setSelectedCategory={setSelectedCategory}/>
        <ul className='review-list'>
-       {reviews.map((review, index) => {
+       {reviews.map((review) => {
                     return <div key = {review.review_id}>
                     <li>
-                    Name:{review.title} Game ID:{review.review_id} Category:{review.category} Designer:{review.designer}
+                    <p>Name:{review.title}</p>
+                    <p>Game ID:{review.review_id}</p>
+                    <p>Category:{review.category}</p>
+                    <p>Designer:{review.designer}</p>
                         <div>
-                            <img id='review-images' src={review.review_img_url}/>
+                           <Link to={`/reviews/${review.review_id}`}>  <img id='review-images' src={review.review_img_url}/></Link>
                         </div>
+                            
                     </li></div>
                 })}
        </ul>
-
             </>
        )}
    

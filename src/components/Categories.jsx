@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Categories = ({setSelectedCategory}) => {
    
@@ -37,7 +37,6 @@ const Categories = ({setSelectedCategory}) => {
               <option value="dexterity">dexterity</option>
               <option value="strategy">strategy</option>
               <option value="deck-building">deck-building</option>
-              <option value="hidden-roles">hidden-roles</option>
               <option value="push-your-luck">push-your-luck</option>
               <option value="engine-building">engine-building</option>
               <option value="roll-and-write">roll-and-write</option>
