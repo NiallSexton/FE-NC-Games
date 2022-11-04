@@ -1,0 +1,6 @@
+.ul-nav {
+    margin:0px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
