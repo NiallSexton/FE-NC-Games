@@ -1,14 +1,25 @@
-import Reviews from './Reviews';
+import Reviews from './SingleReview';
 import axios from 'axios';
 import Categories from './Categories'
 import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { Card, Button } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import ReviewCard from './ReviewCard';
+import Footer from './Footer';
 
 const Home = ({ user }) => {
-    console.log(user)
 
     const [reviews, setReviews] = useState([])
     const [loading, setLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [viewButton, setViewButton] = useState(false);
+    
+    const handleChange = (event) => {
+        setViewButton(true);
+    }
     
     useEffect(() => {
         axios
@@ -34,20 +45,13 @@ const Home = ({ user }) => {
         return <h3>Please wait, loading...</h3>
     } else {return  (
         <>
-       <h2>Welcome To Your Home Page</h2>
+       {/* <h2 className='welcome-message'>Welcome To Your Home Page</h2> */}
+       
        <Categories reviews={reviews} setReviews={setReviews} setSelectedCategory={setSelectedCategory}/>
-       <ul className='review-list'>
-       {reviews.map((review, index) => {
-                    return <div key = {review.review_id}>
-                    <li>
-                    Name:{review.title} Game ID:{review.review_id} Category:{review.category} Designer:{review.designer}
-                        <div>
-                            <img id='review-images' src={review.review_img_url}/>
-                        </div>
-                    </li></div>
-                })}
-       </ul>
 
+        <ReviewCard reviews = {reviews}/>
+        
+        <Footer/>
             </>
        )}
    

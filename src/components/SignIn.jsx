@@ -22,8 +22,8 @@ const SignIn = ({ user, setUser }) => {
     if (loading) {
         return <h3>Please wait, loading...</h3>
     } else {
-        return (
-            <div>
+        return <>
+            <div className='sign-in'>
                 <h3>Choose a profile to log in with</h3>
                 <select value={user} onChange={handleChange}>
                     {userAPI.map((user) => {
@@ -34,7 +34,8 @@ const SignIn = ({ user, setUser }) => {
                     })}
                 </select>
             </div>
-        )
+        <img id='sign-in-image' src='https://as2.ftcdn.net/v2/jpg/02/99/34/53/1000_F_299345334_G9l16Jrb17T1pd0MbXedRNA9CQrOLcjS.jpg'></img>
+        </>
     }
 }
 
