@@ -9,7 +9,7 @@ const Categories = ({setSelectedCategory}) => {
 
     useEffect(()=> {
       axios
-      .get('https://nialls-games-reviews.herokuapp.com/api/reviews')
+      .get('https://nialls-games-reviews-new.herokuapp.com/api/reviews')
       .then((response) => {
         setReviews(response.data);
         setLoading(false);

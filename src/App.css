@@ -1,3 +1,7 @@
+/* * {
+  border: solid red 1px;
+} */
+
 @font-face {
   src: url(/public/Fonts/mrsmonstercond.ttf);
   font-family: monster;
@@ -12,6 +16,7 @@
   padding-left: 5%;
   padding-right: 5%;
   height: 100%;
+  
 }
 
 .App {
@@ -22,6 +27,9 @@
   background-image: linear-gradient(#ced1da, #ced1da);
   height:100%;
   z-index:0;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 0.5%;
 }
 
 body {
@@ -71,7 +79,7 @@ h1 {
 #sign-in-image {
   max-width: 400px;
   border: solid black;
-  border-radius: 20%;
+  border-radius: 10%;
   margin: 2%;
   background-image: url(/public/Pictures/360_F_299345334_G9l16Jrb17T1pd0MbXedRNA9CQrOLcjS.jpg);
 }

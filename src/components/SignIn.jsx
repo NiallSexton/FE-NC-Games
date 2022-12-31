@@ -8,7 +8,7 @@ const SignIn = ({ user, setUser }) => {
 
     useEffect(() => {
         axios
-        .get('https://nialls-games-reviews.herokuapp.com/api/users')
+        .get('https://nialls-games-reviews-new.herokuapp.com/api/users')
         .then((response) => {
             setUserAPI(response.data.users);
             setLoading(false);
