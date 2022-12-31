@@ -23,7 +23,7 @@ const Home = ({ user }) => {
     
     useEffect(() => {
         axios
-        .get('https://nialls-games-reviews.herokuapp.com/api/reviews')
+        .get('https://nialls-games-reviews-new.herokuapp.com/api/reviews')
         .then((response) => {
             if(selectedCategory) {
                 const filteredReviews = response.data.filter((review) => {

@@ -23,7 +23,7 @@ const handleCommentSubmit = (event) => {
     console.log(user, newComment);
 
     axios
-        .post(`https://nialls-games-reviews.herokuapp.com/api/reviews/${review_id}/comments`, {author: user, body: newComment});
+        .post(`https://nialls-games-reviews-new.herokuapp.com/api/reviews/${review_id}/comments`, {author: user, body: newComment});
 }
 
 const handleNewCommentChange = (event) => {
@@ -42,7 +42,7 @@ const handleVoteClick = () => {
     });
 
     axios
-        .patch(`https://nialls-games-reviews.herokuapp.com/api/reviews/${review_id}`, {inc_votes: 1});
+        .patch(`https://nialls-games-reviews-new.herokuapp.com/api/reviews/${review_id}`, {inc_votes: 1});
 }
 
 
@@ -50,7 +50,7 @@ const handleVoteClick = () => {
 
 useEffect(()=> {
     axios
-    .get(`https://nialls-games-reviews.herokuapp.com/api/reviews/${review_id}`)
+    .get(`https://nialls-games-reviews-new.herokuapp.com/api/reviews/${review_id}`)
     .then((response) => {
         setSingleReview(response.data.review)
         // console.log(response.data.review);
@@ -58,7 +58,7 @@ useEffect(()=> {
 
     
     })
-    axios.get(`https://nialls-games-reviews.herokuapp.com/api/reviews/${review_id}/comments`)
+    axios.get(`https://nialls-games-reviews-new.herokuapp.com/api/reviews/${review_id}/comments`)
     .then((response) => {
         // console.log(response);
         // console.log(response.data.rows);
