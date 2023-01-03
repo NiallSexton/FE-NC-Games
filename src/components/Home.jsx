@@ -2,11 +2,11 @@ import Reviews from './SingleReview';
 import axios from 'axios';
 import Categories from './Categories'
 import { useEffect, useState } from 'react';
-import { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+// import { useRef } from 'react';
+// import { Link } from 'react-router-dom';
+// import { Card, Button } from 'react-bootstrap';
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
 import ReviewCard from './ReviewCard';
 import Footer from './Footer';
 
