@@ -53,6 +53,7 @@ h1 {
   overflow-x: hidden;
   z-index:1;
   background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .Header {
@@ -116,7 +117,7 @@ h1 {
 }
 
 #review-images:hover{
-  transform: scale(1.1);
+  transform: scale();
 }
 
 #review-list-ol{
@@ -137,6 +138,7 @@ h1 {
   /* align-items: center; */
   /* position: fixed; */
   border: solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .ul-nav {
@@ -166,19 +168,43 @@ h1 {
   transform: scale(1.4);
 }
 
+.filter-container {
+font-family: monster;
+font-size: 20px;
+}
+
 #singleReviewImage {
   display: block;
-  margin-top: 20px;
-  margin-left: 42.5%;
-  margin-bottom: 20px;
+  /* margin-top: 75px; */
+  /* margin-bottom: 20px; */
   max-width: 400px;
   border: solid black;
   border-radius: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.7s;
+}
+
+#singleReviewImage:hover{
+  transform: scale(1.1);
+}
+
+.singleReviewList {
+  /* border: solid red 1px; */
+  justify-content: left;
+  transition: 0.7s;
+  margin-top: 0;
+}
+
+.gameInformationTitle {
+  font-size: 30px;
+}
+
+.singleReviewList:hover{
+  transform: scale(1.1);
 }
 
 .GameDescription {
-  border: solid black;
+  /* border: solid black; */
   max-width: 1000px;
   justify-content: center;
   border-radius: 25px;
@@ -188,6 +214,20 @@ h1 {
   margin: auto;
   width: 50%;
   padding: 10px;
+  transition: 0.7s;
+  margin-top: 0;
+}
+
+.GameDescription:hover{
+  transform: scale(1.1);
+}
+
+.gameDescriptionTitle {
+  font-size: 30px;
+}
+
+.voteButton {
+  padding: 2%;
 }
 
 .single-review-cards {
@@ -199,6 +239,13 @@ h1 {
   height: auto;
   margin-right: auto;
   border-radius: 4%;
+}
+
+.single-review-main {
+  display: flex;
+  justify-content: space-around;
+  /* border: solid red 1px; */
+  padding-top: 5%;
 }
 
 .container {

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import SignIn from './SignIn';
+// import SignIn from './SignIn';
 
 const SingleReview = ({user}) => {
 
@@ -69,10 +69,11 @@ useEffect(()=> {
   
   return <>
   <div className="single-review-main">
-    <div>
+    <div className="singleReviewImage">
         <img id='singleReviewImage' src={singleReview.review_img_url}></img>
     </div>
-        <li className='singleReviewList'>
+        <ul className='singleReviewList'>
+            <p className="gameInformationTitle"><b>Game Information</b></p>
         <p>Game ID: <b>{review_id}</b></p>
         <p>Name: <b>{singleReview.title}</b></p>
         <p>Category: <b>{singleReview.category}</b></p> 
@@ -81,11 +82,11 @@ useEffect(()=> {
         <p>Created at: <b>{singleReview.created_at}</b></p>
         <p>Number of votes: <b>{votes}</b></p>
         <p>Comments: <b>{singleReview.comment_count}</b></p>
-        </li>
-        <div className='GameDescription'>Game description: {singleReview.review_body}</div>
-        <div>
-            <button onClick={handleVoteClick}>Add your vote here!</button>
+        </ul>
+        <div className='GameDescription'><p className="gameDescriptionTitle"><b>Game description</b></p>{singleReview.review_body}</div>
         </div>
+        <div className="voteButton">
+            <button onClick={handleVoteClick}>Add your vote here!</button>
         </div>
         <div className="game-comments"> <h2>Game Comments</h2>
             
