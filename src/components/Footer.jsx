@@ -8,6 +8,9 @@ const Footer = () => {
             <section>
                 <p>Subscribe to the YouTube Channel</p>
             </section>
+            <>
+            <img src="public/Pictures/gameboardpieces2.png"></img>
+            </>
         </div>
     )
 }
