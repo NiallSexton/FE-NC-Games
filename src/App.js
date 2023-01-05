@@ -25,7 +25,7 @@ function App() {
       ) : (
         <Route path='/' element={<Home user={user}/>} />
         )}
-        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/profile' element={<Profile user={user}/>}/>
         <Route path = '/reviews/:review_id' element={<SingleReview user={user}/>}/>
       </Routes>
     </div>

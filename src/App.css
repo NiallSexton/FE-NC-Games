@@ -3,19 +3,25 @@
 } */
 
 @font-face {
-  src: url(/public/Fonts/mrsmonstercond.ttf);
-  font-family: monster;
-}
-@font-face {
   src: url(/public/Fonts/Nunito-VariableFont_wght.ttf);
   font-family: nunito;
+}
+
+@font-face {
+  src: url(/public/Fonts/Retro\ Gaming.ttf);
+  font-family: Retro;
+}
+
+@font-face {
+  src: url(/public/Fonts/RetroGaming.ttf);
+  font-family: RetroGaming;
 }
 
 .main-background {
   background-color: rgb(85, 83, 83);
   padding-left: 5%;
   padding-right: 5%;
-  height: 100%;
+  /* height: 100%; */
   
 }
 
@@ -34,12 +40,12 @@
 
 body {
   height:100%;
-  /* background-color: rgb(214, 211, 211); */
-  background-image: linear-gradient(#b8bfc7, #ced1da);
+  /* background-image: rgb(214, 211, 211); */
+  background-image: linear-gradient(rgb(214, 211, 211), rgb(214, 211, 211));
 }
 
 h1 {
-  font-family: monster;
+  font-family: RetroGaming;
   color: rgb(230, 43, 43);
   font-size: 60px;
   margin:0%;
@@ -54,6 +60,10 @@ h1 {
   z-index:1;
   background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 151px #0fa;
 }
 
 .Header {
@@ -146,7 +156,9 @@ h1 {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  font-family: monster;
+  font-family: Retro;
+  text-shadow:
+    0 0 7px #fff;
   transition: 0.7s;
 }
 
@@ -169,7 +181,7 @@ h1 {
 }
 
 .filter-container {
-font-family: monster;
+font-family: Retro;
 font-size: 20px;
 }
 

@@ -83,7 +83,7 @@ useEffect(()=> {
         <p>Number of votes: <b>{votes}</b></p>
         <p>Comments: <b>{singleReview.comment_count}</b></p>
         </ul>
-        <div className='GameDescription'><p className="gameDescriptionTitle"><b>Game description</b></p>{singleReview.review_body}</div>
+        <div className='GameDescription'><p className="gameDescriptionTitle"><b>Game Description</b></p>{singleReview.review_body}</div>
         </div>
         <div className="voteButton">
             <button onClick={handleVoteClick}>Add your vote here!</button>
