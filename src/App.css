@@ -18,11 +18,26 @@
 }
 
 .main-background {
-  background-color: rgb(85, 83, 83);
+  /* background-color: rgb(85, 83, 83); */
   padding-left: 5%;
   padding-right: 5%;
   /* height: 100%; */
-  
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 350vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .App {
@@ -30,7 +45,7 @@
   position: relative;
   top: 230px;
   /* background-color: rgb(214, 211, 211); */
-  background-image: linear-gradient(#ced1da, #ced1da);
+  /* background-image: linear-gradient(#ced1da, #ced1da); */
   height:100%;
   z-index:0;
   padding-left: 5%;
@@ -183,6 +198,7 @@ h1 {
 .filter-container {
 font-family: Retro;
 font-size: 20px;
+padding-bottom: 5%;
 }
 
 #singleReviewImage {
